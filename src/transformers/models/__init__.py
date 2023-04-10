@@ -93,6 +93,7 @@ from . import (
     groupvit,
     herbert,
     hubert,
+    hypermixer,
     ibert,
     imagegpt,
     informer,
