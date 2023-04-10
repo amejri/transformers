@@ -1227,6 +1227,7 @@ SLOW_TO_FAST_CONVERTERS = {
     "FunnelTokenizer": FunnelConverter,
     "GPT2Tokenizer": GPT2Converter,
     "HerbertTokenizer": HerbertConverter,
+    "HyperMixerTokenizer": AlbertConverter,
     "LayoutLMTokenizer": BertConverter,
     "LayoutLMv2Tokenizer": BertConverter,
     "LayoutLMv3Tokenizer": RobertaConverter,
