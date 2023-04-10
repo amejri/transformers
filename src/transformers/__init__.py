@@ -318,6 +318,7 @@ _import_structure = {
     ],
     "models.herbert": ["HerbertTokenizer"],
     "models.hubert": ["HUBERT_PRETRAINED_CONFIG_ARCHIVE_MAP", "HubertConfig"],
+    "models.hypermixer": ["HYPER_MIXER_PRETRAINED_CONFIG_ARCHIVE_MAP", "HyperMixerConfig"],
     "models.ibert": ["IBERT_PRETRAINED_CONFIG_ARCHIVE_MAP", "IBertConfig"],
     "models.imagegpt": ["IMAGEGPT_PRETRAINED_CONFIG_ARCHIVE_MAP", "ImageGPTConfig"],
     "models.informer": ["INFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP", "InformerConfig"],
@@ -677,6 +678,7 @@ else:
     _import_structure["models.ernie_m"].append("ErnieMTokenizer")
     _import_structure["models.fnet"].append("FNetTokenizer")
     _import_structure["models.gpt_sw3"].append("GPTSw3Tokenizer")
+    _import_structure["models.hypermixer"].append("HyperMixerTokenizer")
     _import_structure["models.layoutxlm"].append("LayoutXLMTokenizer")
     _import_structure["models.llama"].append("LlamaTokenizer")
     _import_structure["models.m2m_100"].append("M2M100Tokenizer")
@@ -736,6 +738,7 @@ else:
     _import_structure["models.gpt_neox"].append("GPTNeoXTokenizerFast")
     _import_structure["models.gpt_neox_japanese"].append("GPTNeoXJapaneseTokenizer")
     _import_structure["models.herbert"].append("HerbertTokenizerFast")
+    _import_structure["models.hypermixer"].append("HyperMixerTokenizerFast")
     _import_structure["models.layoutlm"].append("LayoutLMTokenizerFast")
     _import_structure["models.layoutlmv2"].append("LayoutLMv2TokenizerFast")
     _import_structure["models.layoutlmv3"].append("LayoutLMv3TokenizerFast")
@@ -1724,6 +1727,23 @@ else:
             "HubertPreTrainedModel",
         ]
     )
+    
+    _import_structure["models.hypermixer"].extend(
+        [
+            "HYPER_MIXER_PRETRAINED_MODEL_ARCHIVE_LIST",
+            "HyperMixerForMaskedLM",
+            "HyperMixerForMultipleChoice",
+            "HyperMixerForNextSentencePrediction",
+            "HyperMixerForPreTraining",
+            "HyperMixerForQuestionAnswering",
+            "HyperMixerForSequenceClassification",
+            "HyperMixerForTokenClassification",
+            "HyperMixerLayer",
+            "HyperMixerModel",
+            "HyperMixerPreTrainedModel",
+        ]
+    )
+    
     _import_structure["models.ibert"].extend(
         [
             "IBERT_PRETRAINED_MODEL_ARCHIVE_LIST",
@@ -4012,6 +4032,7 @@ if TYPE_CHECKING:
     )
     from .models.herbert import HerbertTokenizer
     from .models.hubert import HUBERT_PRETRAINED_CONFIG_ARCHIVE_MAP, HubertConfig
+    from .models.hypermixer import HYPER_MIXER_PRETRAINED_CONFIG_ARCHIVE_MAP, HyperMixerConfig
     from .models.ibert import IBERT_PRETRAINED_CONFIG_ARCHIVE_MAP, IBertConfig
     from .models.imagegpt import IMAGEGPT_PRETRAINED_CONFIG_ARCHIVE_MAP, ImageGPTConfig
     from .models.informer import INFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP, InformerConfig
@@ -4345,6 +4366,7 @@ if TYPE_CHECKING:
         from .models.ernie_m import ErnieMTokenizer
         from .models.fnet import FNetTokenizer
         from .models.gpt_sw3 import GPTSw3Tokenizer
+        from .models.hypermixer import HyperMixerTokenizer
         from .models.layoutxlm import LayoutXLMTokenizer
         from .models.llama import LlamaTokenizer
         from .models.m2m_100 import M2M100Tokenizer
@@ -4396,6 +4418,7 @@ if TYPE_CHECKING:
         from .models.gpt_neox import GPTNeoXTokenizerFast
         from .models.gpt_neox_japanese import GPTNeoXJapaneseTokenizer
         from .models.herbert import HerbertTokenizerFast
+        from .models.hypermixer import HyperMixerTokenizerFast
         from .models.layoutlm import LayoutLMTokenizerFast
         from .models.layoutlmv2 import LayoutLMv2TokenizerFast
         from .models.layoutlmv3 import LayoutLMv3TokenizerFast
@@ -5208,6 +5231,19 @@ if TYPE_CHECKING:
             HubertForSequenceClassification,
             HubertModel,
             HubertPreTrainedModel,
+        )
+        from .models.hypermixer import (
+            HYPER_MIXER_PRETRAINED_MODEL_ARCHIVE_LIST,
+            HyperMixerForMaskedLM,
+            HyperMixerForMultipleChoice,
+            HyperMixerForNextSentencePrediction,
+            HyperMixerForPreTraining,
+            HyperMixerForQuestionAnswering,
+            HyperMixerForSequenceClassification,
+            HyperMixerForTokenClassification,
+            HyperMixerLayer,
+            HyperMixerModel,
+            HyperMixerPreTrainedModel,
         )
         from .models.ibert import (
             IBERT_PRETRAINED_MODEL_ARCHIVE_LIST,
